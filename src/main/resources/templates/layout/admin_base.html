@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="admlayout(pagetitle,pagecontent)">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content=" Bodhi Technology providing complete suite of software solutions and services that meet their evolving needs and growing business,the most sophisticated and yet user-friendly software to use.">
+    <meta name="generator" content="Hugo 0.84.0">
+    <meta name="author" content="Bodhi Technology,Solapur" />
+    <meta property="og:description" content="Bodhi Technology is a leading software development company providing software consultancy and solutions to industries and educational institutes.We are onestop shop for all kinds of customzied softwares and automation required. " />
+    <meta property="og:title" content="Bodhi Technology - Grow your business with us" />
+    <meta name="twitter:title" content="Bodhi Technology - Grow your business with us" />
+    <meta property="og:url" content="https://bodhi-tech.web.app" />
+    <meta property="og:site_name" content="Bodhi Technology - Grow your business with us" />
+    <meta name="keywords" content="software,development,company,educational software,erp,admission,industrial,android,web,web application" />
+    <meta property="og:image" content="assets/img/logo/apple-icon-180x180.png" th:content="@{assets/img/logo/apple-icon-180x180.png}" />
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="shortcut icon" href="assets/img/icons/icon-48x48.png" th:href="@{assets/img/icons/icon-48x48.png}"/> 
+  
+    <title th:replace=${pagetitle}> Title </title>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="57x57" th:href="@{assets/img/logo/apple-icon-57x57.png}">
+  <link rel="apple-touch-icon" sizes="60x60" th:href="@{assets/img/logo/apple-icon-60x60.png}">
+  <link rel="apple-touch-icon" sizes="72x72" th:href="@{assets/img/logo/apple-icon-72x72.png}">
+  <link rel="apple-touch-icon" sizes="76x76" th:href="@{assets/img/logo/apple-icon-76x76.png}">
+  <link rel="apple-touch-icon" sizes="114x114" th:href="@{assets/img/logo/apple-icon-114x114.png}">
+  <link rel="apple-touch-icon" sizes="120x120" th:href="@{assets/img/logo/apple-icon-120x120.png}">
+  <link rel="apple-touch-icon" sizes="144x144" th:href="@{assets/img/logo/apple-icon-144x144.png}">
+  <link rel="apple-touch-icon" sizes="152x152" th:href="@{assets/img/logo/apple-icon-152x152.png}">
+  <link rel="apple-touch-icon" sizes="180x180" th:href="@{assets/img/logo/apple-icon-180x180.png}">
+  <link rel="icon" type="image/png" sizes="192x192" th:href="@{assets/img/logo/android-icon-192x192.png}">
+  <link rel="icon" type="image/png" sizes="32x32" th:href="@{assets/img/logo/favicon-32x32.png}">
+  <link rel="icon" type="image/png" sizes="96x96" th:href="@{assets/img/logo/favicon-96x96.png}">
+  <link rel="icon" type="image/png" sizes="16x16" th:href="@{assets/img/logo/favicon-16x16.png}">
+  <link rel="manifest" th:href="@{assets/img/logo/manifest.json}">
+  <meta name="msapplication-TileColor" content="#ee948f">
+  <meta name="msapplication-TileImage" content="assets/img/logo/ms-icon-144x144.png" th:content="@{assets/img/logo/ms-icon-144x144.png}">
+  <meta name="theme-color" content="#ee948f">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="white">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
+
+ 
+  <link th:href="@{assets/css/light.css}" rel="stylesheet">
+  <link th:href="@{assets/plugin/fontawesome/css/all.css}" rel="stylesheet">
+  
+<!--  Delete it  
+  <link th:href="@{assets/plugin/choicesjs/css/choices.min.css}" rel="stylesheet">
+  <link th:href="@{assets/plugin/flatpickr/css/flatpickr.min.css}" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+-->  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      opacity: 0;
+    }
+    .form-label{
+    	font-weight: bolder;
+    }
+
+  </style>
+</head>
+
+
+
+<!--  HOW TO USE: 
+  data-theme: default (default), dark, light, colored
+  data-layout: fluid (default), boxed
+  data-sidebar-position: left (default), right
+  data-sidebar-layout: default (default), compact -->
+
+  <!-- Font awesome icons 
+  <i class="fas fa-shield-alt mr-2" aria-hidden="true"></i>
+  <i class="nav-icon fa fa-cogs" aria-hidden="true"></i>
+  <i class="nav-icon fas fa-school"></i> -->
+
+<body  data-theme="light" data-layout="fluid" data-sidebar-position="right" data-sidebar-layout="default">
+<div class="wrapper">  <!-- this div class="wrapper" end in footer -->
+	
+		<!-- SIDEBAR START -->
+<nav id="sidebar" class="sidebar js-sidebar collapsed">
+	<div class="sidebar-content js-simplebar">
+			
+		<ul class="sidebar-nav">
+		<li class="sidebar-header shadow-sm text-black" >
+						<b>DashBoard</b>
+				</li>
+				<li class="sidebar-item active">
+						<a class="sidebar-link" href="#" th:href="@{/dashboard}">
+                           <i class="fa-solid fa-cogs fa-lg"></i> <span>DashBoard</span>
+                       </a>
+					 
+				</li>
+
+
+				<li class="sidebar-header shadow-sm text-black" >
+						<b>Admission</b>
+				</li>
+				
+				<li class="sidebar-item">
+		
+						<a href="index.html#auth" data-bs-toggle="collapse" class="sidebar-link collapsed">
+							<i class="fa-solid fa-building-columns"></i> <span class="align-middle">Master</span>
+						</a>
+						<ul id="auth" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+							<li class="sidebar-item"><a class="sidebar-link" href="#" th:href="@{/addcourse}"><i class="fa-solid fa-people-roof"></i>Add Course</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="#" th:href="@{/addinternship}"><i class="fa-solid fa-people-group"></i>Add Internship</a></li>
+						</ul>                       
+                        </a>
+				</li>
+
+					
+
+				<li class="sidebar-item">
+						<a class="sidebar-link" href="#" th:href="@{/admission}">
+						<i class="fa-solid fa-graduation-cap"></i><span class="align-middle">Admission</span>
+                        </a>
+			    </li>
+
+				<li class="sidebar-item">
+						<a class="sidebar-link" href="#" th:href="@{/listadmission}">
+						<i class="fa-solid fa-list-alt"></i><span class="align-middle">Admission List</span>
+                        </a>
+				</li>
+
+				<li class="sidebar-item">
+						<a class="sidebar-link" href="#" th:href="@{/admreport}">
+						<i class="fa-solid fa-chalkboard-user"></i> <span class="align-middle">Admission Report</span>
+                        </a>
+				</li>
+
+
+				 <!-- <hr style="border:1px groove #3b7ddd;">  -->
+
+				 <li class="sidebar-header shadow-sm text-black" >
+						<b>Quotation</b>
+				</li>
+
+				<li class="sidebar-item">
+						<a class="sidebar-link" href="#" th:href="@{/quotgenerate}">
+						<i class="fa-solid fa-calendar-alt"></i> <span class="align-middle">Create Quotation</span>
+                        </a>
+				</li>
+
+				<li class="sidebar-item">
+						<a class="sidebar-link" href="#" th:href="@{/quotationlist}">
+						<i class="fa-solid fa-list"></i> <span class="align-middle">Quotation List</span>
+                        </a>
+				</li>
+				
+				
+				 <!-- <hr style="border:1px groove #3b7ddd;">  -->
+
+				 <li class="sidebar-header shadow-sm text-black" >
+						<b>Bill</b>
+				</li>
+
+				<li class="sidebar-item">
+						<a class="sidebar-link" href="#" th:href="@{/billgenerate}">
+						<i class="fa-solid fa-shopping-bag"></i> <span class="align-middle">Create Bill</span>
+                        </a>
+				</li>
+
+				<li class="sidebar-item">
+						<a class="sidebar-link" href="#" th:href="@{/billlist}">
+						<i class="fa-solid fa-exchange-alt"></i> <span class="align-middle">Bill List</span>
+                        </a>
+				</li>
+
+
+				<li class="sidebar-header shadow-sm text-black" >
+						<b>Enroll Employees</b>
+				</li>
+
+				<li class="sidebar-item">
+						<a class="sidebar-link" href="#" th:href="@{/empenroll}">
+						<i class="fa-solid fa-address-card"></i> <span class="align-middle">Enroll Employee</span>
+                        </a>
+				</li>
+
+				<li class="sidebar-item">
+						<a class="sidebar-link" href="#" th:href="@{/listemployee}">
+						<i class="align-middle me-2 fas fa-fw fa-list-alt"></i> <span class="align-middle">List Employee</span>
+                        </a>
+				</li>
+
+
+				<li class="sidebar-header shadow-sm text-black" >
+						<b>Projects</b>
+				</li>
+
+				<li class="sidebar-item">
+						<a class="sidebar-link" href="#" th:href="@{/projects}">
+						<i class="fa-solid fa-address-card"></i> <span class="align-middle">Assign Projects</span>
+                        </a>
+				</li>
+
+				<li class="sidebar-item">
+						<a class="sidebar-link" href="#" th:href="@{/projectlist}">
+						<i class="align-middle me-2 fas fa-fw fa-list-alt"></i> <span class="align-middle">List Projects</span>
+                        </a>
+				</li>
+
+
+	            
+
+
+
+				<li class="sidebar-header shadow-sm text-black" >
+						<b>LogOut</b>
+				</li>
+
+				<li class="sidebar-item">
+						<a class="sidebar-link" th:href="@{/logout}">
+						<i class="align-middle me-2 fas fa-fw fa-sign-out-alt"></i> <span class="align-middle">LogOut</span>
+                        </a>
+				</li>
+
+
+		</ul>
+		
+	</div>
+</nav>
+
+		<!-- SIDEBAR END -->
+
+
+		
+
+<!-- NAVBAR START -->
+<div class="main">  <!-- this div class="main" end in footer -->
+	<nav class="navbar navbar-expand navbar-light navbar-bg">
+				<a class="sidebar-toggle js-sidebar-toggle">
+                          <i class="hamburger align-self-center"></i>
+                </a>
+
+
+		<!-- <form class="d-none d-sm-inline-block">
+					<div class="input-group input-group-navbar">
+						<input type="text" class="form-control" placeholder="Search…" aria-label="Search">
+						<button class="btn" type="button">
+							<i class="align-middle" data-feather="search"></i>
+						</button>
+					</div>
+				</form> -->
+
+				
+		<ul class="navbar-nav d-none d-lg-flex">
+					
+				<li class="nav-item dropdown">
+							<a class="nav-icon dropdown-toggle" href="#" id="alertsDropdown" data-bs-toggle="dropdown" title="Notification">
+								<div class="position-relative">
+									<i class="align-middle" data-feather="bell"></i>
+									<span class="indicator">4</span>
+								</div>
+							</a>
+							<div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="alertsDropdown">
+								<div class="dropdown-menu-header">
+									4 New Notifications
+								</div>
+								<div class="list-group">
+									<a href="#" class="list-group-item">
+										<div class="row g-0 align-items-center">
+											<div class="col-2">
+												<i class="text-danger" data-feather="alert-circle"></i>
+											</div>
+											<div class="col-10">
+												<div class="text-dark">Update completed</div>
+												<div class="text-muted small mt-1">Restart server 12 to complete the update.</div>
+												<div class="text-muted small mt-1">30m ago</div>
+											</div>
+										</div>
+									</a>
+							
+								</div>
+								<div class="dropdown-menu-footer">
+									<a href="#" class="text-muted">Show all notifications</a>
+								</div>
+							</div>
+						</li>
+
+				
+						<li class="nav-item">
+							<a class="nav-icon js-fullscreen d-none d-lg-block" href="#" title="Full-Screen">
+								<div class="position-relative">
+									<i class="align-middle" data-feather="maximize"></i>
+								</div>
+							</a>
+						</li>
+
+
+						<li class="nav-item dropdown">
+							<a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-bs-toggle="dropdown">
+                                <i class="align-middle" data-feather="settings"></i>
+                             </a>
+
+							<a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
+                                <img th:src="@{assets/img/avatars/avatar.jpg}" class="avatar img-fluid rounded me-1" alt="User Name" /> 
+                                <!--<span class="text-dark" th:text="${user.first_name}"}></span> 
+                                <span class="text-dark" th:text="${user.last_name}"}></span> -->
+                            </a>
+							<div class="dropdown-menu dropdown-menu-end">
+								<a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1" data-feather="settings"></i> Profile</a>
+								
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" th:href="@{/logout}"><i class="align-middle me-1" data-feather="log-out"></i>Log out</a>
+							</div>
+						</li>
+		</ul>
+
+
+
+				   <div class="navbar-collapse collapse">
+				        <ul class="navbar-nav navbar-align me-auto">
+
+					        <a class="text-decoration-none" href="#" style="color:#000000;" >
+				              <img th:src="@{assets/img/logo/android-icon-48x48.png}" class="avatar img-fluid rounded" alt="Company Name"  /> 
+                              Bodhi Technology
+				            </a>	
+
+
+				       </ul>
+				   </div> 
+
+				
+	</nav>
+
+			<!-- NAVBAR END -->
+			
+			
+			
+<!-- BODY MAIN START-->		
+<main class="content" th:replace=${pagecontent} >
+
+
+</main>
+<!-- BODY MAIN END-->
+			
+
+			<footer class="footer">
+				<div class="container-fluid">
+					<div class="row text-muted">
+						<div class="col-6 text-start">
+							<p class="mb-0">
+							<strong>Copyright &copy; <script>document.write(new Date().getFullYear());</script> <a href="https://bodhi-tech.web.app" target="_blank"> Bodhi Technology</a></strong> All rights reserved.
+								
+							</p>
+						</div>
+						<div class="col-6 text-end">
+							<ul class="list-inline">
+								<li class="list-inline-item">
+									<a href="#" target="_blank" class="text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="Support"><i class="fa-solid fa-phone fa-lg" style="color:#3b7ddd;"></i></a>
+								</li>
+								<li class="list-inline-item">
+									<a  href="#" target="_blank" class="text-muted" data-bs-toggle="tooltip" data-bs-placement="top" title="Help"><i class="fa-solid fa-circle-question fa-lg" style="color:#3b7ddd;"></i></a>
+								</li>
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div> <!-- this div class="wrapper" end in footer -->
+	</div> <!-- this div class="main" end in footer -->
+	
+	<script th:src="@{assets/js/jquery.min.js}"></script>
+	<script th:src="@{assets/js/app.js}"></script>
+	<script th:src="@{assets/js/datatables.js}"></script>
+	<script th:src="@{assets/plugin/fontawesome/js/all.js}"></script>
+<!--  	
+Delete it 
+	<script th:src="@{assets/plugin/choicesjs/js/choices.min.js}"></script>
+	<script th:src="@{assets/plugin/flatpickr/js/flatpickr.js}"></script>
+	<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+-->	
+<!-- ToolTip Script Start-->	
+<script> 
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+</script>
+<!-- ToolTip Script End -->	
+
+<!-- Search Filter Dropdown Start  -->
+<script>
+		
+</script>
+<!-- Search Filter Dropdown & Date Time End  -->
+
+<!-- Date Range Picker Start -->
+<script>
+		
+</script>
+<!-- Date Range Picker End -->
+
+
+
+<!-- need to verify uses of below scripts -->
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			var ctx = document.getElementById("chartjs-dashboard-line").getContext("2d");
+			var gradient = ctx.createLinearGradient(0, 0, 0, 225);
+			gradient.addColorStop(0, "rgba(215, 227, 244, 1)");
+			gradient.addColorStop(1, "rgba(215, 227, 244, 0)");
+			// Line chart
+			new Chart(document.getElementById("chartjs-dashboard-line"), {
+				type: "line",
+				data: {
+					labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+					datasets: [{
+						label: "Sales ($)",
+						fill: true,
+						backgroundColor: gradient,
+						borderColor: window.theme.primary,
+						data: [
+							2115,
+							1562,
+							1584,
+							1892,
+							1587,
+							1923,
+							2566,
+							2448,
+							2805,
+							3438,
+							2917,
+							3327
+						]
+					}]
+				},
+				options: {
+					maintainAspectRatio: false,
+					legend: {
+						display: false
+					},
+					tooltips: {
+						intersect: false
+					},
+					hover: {
+						intersect: true
+					},
+					plugins: {
+						filler: {
+							propagate: false
+						}
+					},
+					scales: {
+						xAxes: [{
+							reverse: true,
+							gridLines: {
+								color: "rgba(0,0,0,0.0)"
+							}
+						}],
+						yAxes: [{
+							ticks: {
+								stepSize: 1000
+							},
+							display: true,
+							borderDash: [3, 3],
+							gridLines: {
+								color: "rgba(0,0,0,0.0)"
+							}
+						}]
+					}
+				}
+			});
+		});
+	</script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			// Pie chart
+			new Chart(document.getElementById("chartjs-dashboard-pie"), {
+				type: "pie",
+				data: {
+					labels: ["Chrome", "Firefox", "IE"],
+					datasets: [{
+						data: [4306, 3801, 1689],
+						backgroundColor: [
+							window.theme.primary,
+							window.theme.warning,
+							window.theme.danger
+						],
+						borderWidth: 5
+					}]
+				},
+				options: {
+					responsive: !window.MSInputMethodContext,
+					maintainAspectRatio: false,
+					legend: {
+						display: false
+					},
+					cutoutPercentage: 75
+				}
+			});
+		});
+	</script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			// Bar chart
+			new Chart(document.getElementById("chartjs-dashboard-bar"), {
+				type: "bar",
+				data: {
+					labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+					datasets: [{
+						label: "This year",
+						backgroundColor: window.theme.primary,
+						borderColor: window.theme.primary,
+						hoverBackgroundColor: window.theme.primary,
+						hoverBorderColor: window.theme.primary,
+						data: [54, 67, 41, 55, 62, 45, 55, 73, 60, 76, 48, 79],
+						barPercentage: .75,
+						categoryPercentage: .5
+					}]
+				},
+				options: {
+					maintainAspectRatio: false,
+					legend: {
+						display: false
+					},
+					scales: {
+						yAxes: [{
+							gridLines: {
+								display: false
+							},
+							stacked: false,
+							ticks: {
+								stepSize: 20
+							}
+						}],
+						xAxes: [{
+							stacked: false,
+							gridLines: {
+								color: "transparent"
+							}
+						}]
+					}
+				}
+			});
+		});
+	</script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			var markers = [{
+					coords: [31.230391, 121.473701],
+					name: "Shanghai"
+				},
+				{
+					coords: [28.704060, 77.102493],
+					name: "Delhi"
+				},
+				{
+					coords: [6.524379, 3.379206],
+					name: "Lagos"
+				},
+				{
+					coords: [35.689487, 139.691711],
+					name: "Tokyo"
+				},
+				{
+					coords: [23.129110, 113.264381],
+					name: "Guangzhou"
+				},
+				{
+					coords: [40.7127837, -74.0059413],
+					name: "New York"
+				},
+				{
+					coords: [34.052235, -118.243683],
+					name: "Los Angeles"
+				},
+				{
+					coords: [41.878113, -87.629799],
+					name: "Chicago"
+				},
+				{
+					coords: [51.507351, -0.127758],
+					name: "London"
+				},
+				{
+					coords: [40.416775, -3.703790],
+					name: "Madrid "
+				}
+			];
+			var map = new jsVectorMap({
+				map: "world",
+				selector: "#world_map",
+				zoomButtons: true,
+				markers: markers,
+				markerStyle: {
+					initial: {
+						r: 9,
+						strokeWidth: 7,
+						stokeOpacity: .4,
+						fill: window.theme.primary
+					},
+					hover: {
+						fill: window.theme.primary,
+						stroke: window.theme.primary
+					}
+				},
+				zoomOnScroll: false
+			});
+			window.addEventListener("resize", () => {
+				map.updateSize();
+			});
+		});
+	</script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			var date = new Date(Date.now() - 5 * 24 * 60 * 60 * 1000);
+			var defaultDate = date.getUTCFullYear() + "-" + (date.getUTCMonth() + 1) + "-" + date.getUTCDate();
+			document.getElementById("datetimepicker-dashboard").flatpickr({
+				inline: true,
+				prevArrow: "<span title=\"Previous month\">&laquo;</span>",
+				nextArrow: "<span title=\"Next month\">&raquo;</span>",
+				defaultDate: defaultDate
+			});
+		});
+	</script>
+	<script>
+		// DataTables with Column Search by Text Inputs
+		document.addEventListener("DOMContentLoaded", function() {
+			// Setup - add a text input to each footer cell
+			$("#datatables-column-search-text-inputs tfoot th").each(function() {
+				var title = $(this).text();
+				$(this).html("<input type=\"text\" class=\"form-control\" placeholder=\"Search " + title + "\" />");
+			});
+			// DataTables
+			var table = $("#datatables-column-search-text-inputs").DataTable();
+			
+			// Apply the search
+			table.columns().every(function() {
+				var that = this;
+				$("input", this.footer()).on("keyup change clear", function() {
+					if (that.search() !== this.value) {
+						that
+							.search(this.value)
+							.draw();
+					}
+				});
+			});
+		});
+		// DataTables with Column Search by Select Inputs
+		document.addEventListener("DOMContentLoaded", function() {
+			$("#datatables-column-search-select-inputs").DataTable({
+				initComplete: function() {
+					this.api().columns().every(function() {
+						var column = this;
+						var select = $("<select class=\"form-control\"><option value=\"\"></option></select>")
+							.appendTo($(column.footer()).empty())
+							.on("change", function() {
+								var val = $.fn.dataTable.util.escapeRegex(
+									$(this).val()
+								);
+								column
+									.search(val ? "^" + val + "$" : "", true, false)
+									.draw();
+							});
+						column.data().unique().sort().each(function(d, j) {
+							select.append("<option value=\"" + d + "\">" + d + "</option>")
+						});
+					});
+				}
+			});
+		});
+	</script>
+	
+  <script type="text/javascript">
+
+  	$(".installmentDiv").hide();
+
+
+  
+
+  	
+	
+	function changeInstallment(value){
+		
+		if(value=="yes"){
+			$(".installmentDiv").show();
+			addInstall();
+		}
+	}
+
+		var i=1;
+
+	function addInstall(){
+		html=` <tr id="row`+i+`" class="addinstallrow" data-num="`+i+`">
+  
+    	<td>
+			<input type="number" class="form-control" name="" id="Installment_Number`+i+`" required>
+		</td>
+		<td>
+			<input type="number" class="form-control installamt"  name="" id="installment_Amount`+i+`" required>
+		</td>
+		<td>
+			<input type="date" class="form-control" name="" id="paid_date`+i+`" required>
+		</td>	
+		<td>
+			<input type="number" disabled class="form-control" name="" id="Remaining_Amount`+i+`" required>
+		</td>
+		<td>
+			<button type="button" class="btn btn-danger" onclick="remIntsall('row`+i+`')">Delete</button>
+		</td>
+
+    </tr> `;
+
+		$(".installmentRow").append(html);
+    	$("#installcount").val(String(i));
+    	i++;
+
+  
+	}
+	function remIntsall(id){
+
+		removerow="#"+id;
+		let rownum=$(removerow).attr("data-num");
+  		let paiddivid="#installment_Amount"+rownum;
+		let paidval=parseInt($(removerow).find(paiddivid).val());
+
+		if(!isNaN(paidval)){
+			
+			$("#feesToPaid").val(String(parseInt($("#feesToPaid").val())+paidval));
+			$(removerow).remove();
+			calRemAmt();
+		}else{
+			$(removerow).remove();
+		}
+
+		$("#installcount").val(parseInt($("#installcount").val())-1);
+
+	}
+
+	function calRemAmt(){
+
+		let numOfRows=parseInt($("#installcount").val());
+		let totalamt=parseInt($("#inputTotalFees").val());
+		$("#feesToPaid").val(String(totalamt));
+
+		$(".addinstallrow").each(function(){
+
+			let rownum=$(this).attr("data-num");
+
+			let fees=parseInt($("#feesToPaid").val());
+
+				let amtdiv="#installment_Amount"+rownum;
+				let amount=parseInt($(amtdiv).val());
+				let remdiv="#Remaining_Amount"+rownum;
+				$(remdiv).val(String(fees-amount));
+				$("#feesToPaid").val(String(fees-amount));
+
+
+		});
+
+	}
+
+	// calculate rem amt
+	$(document).on('change', '.installamt', function() {
+		let totalamt=parseInt($("#inputTotalFees").val());
+  		let amount=parseInt($(this).val());
+
+  		if(amount>totalamt){
+  			alert("Installment should be less than total amount");
+  			$(this).val("0");
+  		}
+  		else{
+  			let parent=$(this).closest(".addinstallrow");
+  			let rownum=parent.attr("data-num");
+  			let remdivid="#Remaining_Amount"+rownum;
+  			let remdiv=parent.find(remdivid);
+
+  			let fees=parseInt($("#feesToPaid").val());
+  			let remamt=fees-amount;
+  			remdiv.val(remamt);
+
+  			$("#feesToPaid").val(String(remamt));
+
+  		}
+
+
+	});
+
+	//on total fees changed
+	$(document).on('change', '#inputTotalFees', function() {
+
+		$("#feesToPaid").val($(this).val());
+		calRemAmt();
+
+	});
+
+
+
+
+	function enrollfor(val){
+	    document.getElementById("selectInternship").disabled=true;
+	    document.getElementById("inputSponsershipDetails").disabled=true;
+	    document.getElementById("selectCourse").disabled=true;
+
+		dispDiv=document.getElementById(val);
+		dispDiv.disabled=false;
+	}
+
+
+	// add bill items
+	var j=1;
+	function addBill(){
+		html=` <tr id="billRow`+j+`" class="billItemRow" data-num="`+j+`">
+  
+    	<td>
+			<input type="number" disabled class="form-control" name="" id="bill_no`+j+`" value="`+j+`" required>
+		</td>
+		<td>
+			<input type="text" class="form-control"  name="" id="bill_desc`+j+`" required>
+		</td>
+		<td>
+			<input type="number" min="1" value="0" class="form-control billQty" name="" id="bill_qty`+j+`" required>
+		</td>
+		<td>
+			<input type="number" min="1" value="0" class="form-control billUnitPr" name="" id="bill_unitpr`+j+`" required>
+		</td>		
+		<td>
+			<input type="number" min="1" value="1" class="form-control billMonths" name="" id="bill_months`+j+`" required>
+		</td>
+		<td>
+			<input type="number" min="1" value="0" disabled class="form-control" name="" id="bill_amt`+j+`" required>
+		</td>
+		<td>
+			<button type="button" class="btn btn-danger" onclick="remBill('billRow`+j+`')">Delete</button>
+		</td>
+
+    </tr> `;
+
+		$(".billItemsRow").append(html);
+		j++;
+		calBillAmt();
+    	
+
+  
+	}
+
+		$(document).on('change', '.billMonths', function() {
+			calBillAmt();
+		});
+
+		$(document).on('change', '.billQty', function() {
+			calBillAmt();
+		});
+
+		$(document).on('change', '.billUnitPr', function() {
+			calBillAmt();
+		});
+
+
+		$(document).on('change', '#totalBillAmt', function() {
+			calBillAmt();
+		});
+
+
+		$(document).on('change', '#billDiscount', function() {
+			calBillAmt();
+		});
+
+
+		$(document).on('change', '#billdisType', function() {
+			calBillAmt();
+		});
+
+	function remBill(id){
+
+		let removerow="#"+id;
+		$(removerow).remove();
+		calBillAmt();
+
+	}
+
+	function calBillAmt(){
+
+			let totalAmt=0;
+			let inc=1;
+
+		$(".billItemRow").each(function(){
+
+			let rownum=$(this).attr("data-num");
+			
+			let monthdiv="#bill_months"+rownum;
+			let unitprdiv="#bill_unitpr"+rownum;
+			let qtydiv="#bill_qty"+rownum;
+
+			$("#bill_no"+rownum).val(String(inc));
+
+			let q=parseInt($(qtydiv).val());
+			let u=parseInt($(unitprdiv).val());
+			let m=parseInt($(monthdiv).val());
+
+			let amt=q*u*m;
+			totalAmt+=amt;
+
+			let billamtdiv="#bill_amt"+rownum;
+			$(billamtdiv).val(String(amt));
+
+			inc++;
+
+		});
+
+		$("#totalBillAmt").val(String(totalAmt));
+
+
+		let billDiscount=parseInt($("#billDiscount").val());
+		let billdisType=$("#billdisType").val();
+		let total=parseInt($("#totalBillAmt").val());
+
+
+		if(billdisType=="per"){
+
+			let grandtotal=total-(total*(billDiscount/100));
+			$("#grandBillTotal").val(String(grandtotal));
+
+		}
+		else{
+
+			let grandtotal=total-billDiscount;			
+			$("#grandBillTotal").val(String(grandtotal));
+		}
+
+
+	}
+
+
+	// add rows in quotation
+	var k=1;
+	function addFeaturesRows(){
+		let html=`<tr id="inputFeaturesRow`+k+`" >
+										<td class="col-md-12"><input type="text" class="form-control" id="inputFeatures`+k+`" placeholder="Features" required></td>
+										<td><button type="button" class="btn btn-danger" onclick="remFeaturesRows('inputFeaturesRow`+k+`')">Delete</button></td>
+									</tr>`;
+		$("#addFeaturesRows").append(html);
+		k++;
+	}
+
+	function  remFeaturesRows(id) {
+		$("#"+id).remove();
+	}
+
+
+
+
+</script>
+
+</body>
+
+</html>			

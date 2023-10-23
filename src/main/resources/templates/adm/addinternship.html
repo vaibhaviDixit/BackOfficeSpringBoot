@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="layout/admin_base::admlayout(~{::title},~{::main})">
+<head>
+
+<title>Internship Add</title>
+</head>
+<body>
+
+
+
+<!-- BODY MAIN START-->
+<main class="content">
+	<div class="container-fluid p-0">
+
+
+<!--  -->
+
+<form  action="#" method="POST" id="enroll" enctype="multipart/form-data">		
+<div class="col-md-12">
+	<div class="card">
+		  <h5 class="card-header" style="text-align: end;">Admission Form</h5>
+					
+		<div class="card-body">
+							
+<!-- Child Card Candidate Details Start -->				
+<div class="card">
+  <h5 class="card-header">Candidate Details</h5>
+  <div class="card-body">
+    <div class="row">
+    	<div class="mb-3 col-md-3">
+						<label class="form-label" for="inputFirstName">First Name</label>
+						<input type="text" class="form-control" id="inputFirstName" placeholder="First Name" required>
+					</div>
+					<div class="mb-3 col-md-3">
+						<label class="form-label" for="inputFatherName">Father Name</label>
+						<input type="text" class="form-control" id="inputFatherName" placeholder="Father Name" required>
+					</div>
+					<div class="mb-3 col-md-3">
+						<label class="form-label" for="inputMotherName">Mother Name</label>
+						<input type="text" class="form-control" id="inputMotherName" placeholder="Mother Name">
+					</div>
+					<div class="mb-3 col-md-3">
+						<label class="form-label" for="inputGender" >Gender</label>
+						<select id="selectGender" class="form-control" required>
+							<option selected disabled value="">Choose...</option>
+							<option>Male</option>
+							<option>Female</option>
+							<option>Other</option>
+						</select>
+					</div>
+					<div class="mb-3 col-md-3">
+						<label class="form-label" for="inputEmail">Email</label>
+						<input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+					</div>
+					<div class="mb-3 col-md-3">
+						<label class="form-label" for="inputAddress">Address</label>
+						<textarea class="form-control" id="inputAddress" placeholder="Address" rows="1" required></textarea>
+					</div>
+					<div class="mb-3 col-md-3">
+						<label class="form-label" for="inputMobile">Mobile</label>
+						<input type="text" class="form-control" name="" placeholder="Mobile" id="inputMobile" required>
+					</div>
+					
+						
+					
+    </div> <!-- Child Card row end -->	    
+  </div> <!-- Child .Card-Body -->
+</div> <!-- Child .Card -->
+<!-- Child Card Candidate Details End -->	
+
+<!-- Child Card Enroll Details Start -->				
+<div class="card">
+  <h5 class="card-header">Enroll Details</h5>
+  <div class="card-body">
+    <div class="row">
+    <!-- Required to create dependent dropdown here 
+				 1) if select Internship then Internhip Title required 
+				 2) if select Sponsership then Project Title required
+				 3) if select Course then Type of Course required -->
+				 
+					<div class="mb-3 col-md-3">
+						<label class="form-label" for="inputEnroll">Enroll For</label>
+						<select id="selectEnroll" class="form-control" required>
+							<option selected disabled value="">Choose...</option>
+							<option>Internship</option>
+							<option>Sponsership</option>
+							<option>Course</option>
+						</select>
+					</div>
+					<div class="mb-3 col-md-3">
+						<label class="form-label" for="inputInternship">Internship Title</label>
+						<select id="selectInternship" class="form-control" required disabled>
+							<option selected disabled value="">Choose...</option>
+							<option>Python-Data Science</option>
+							<option>Python-Django</option>
+							<option>Python-Tkinter GUI</option>
+							<option>AI & ML</option>
+							<option value="Mobile Application Development using Java-Android SDK">Mobile-App-Java</option>
+							<option>Rust</option>
+							<option>Java-SpringBoot-Thymeleaf</option>
+						</select>
+					</div>
+					
+					
+					<div class="mb-3 col-md-3">
+						<label class="form-label" for="inputCourse">Course Title</label>
+						<select id="selectCourse" class="form-control" required disabled>
+							<option selected disabled value="">Choose...</option>
+							<option>Python Programming Language</option>
+							<option>Web Development Using Django</option>
+							<option>Java Programming Language</option>
+							<option>Rust Programming Language</option>
+							<option>Web Development Using SpringBoot-Thymeleaf</option>
+							<option value="Android Application Development">Android</option>
+							<option>Linux/Unix</option>
+						</select>
+					</div>
+		<div class="mb-3 col-md-3">
+						<label class="form-label" for="inputSponsershipDetails">Sponsership Details</label>
+						<textarea class="form-control" id="inputSponsershipDetails" rows="1" required disabled readonly>Python-Django Project</textarea>
+		</div>			
+    	<div class="mb-3 col-md-3">
+			<label class="form-label" for="admissionDate">Admission Date</label>
+			<input type="text" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" required />
+			<span class="text-muted">e.g 28/07/2022</span>
+		</div>
+		<div class="mb-3 col-md-4">
+			<label class="form-label" for="startEndDate"> Course/Internship/Sponsership Start-End Date </label>
+			<input type="text" class="form-control flatpickr-range" placeholder="Select dates" />
+		</div>
+    </div> <!-- Child Card row end -->
+  </div> <!-- Child .Card-Body -->
+</div> <!-- Child .Card -->
+<!-- Child Card Enroll Details End -->
+
+<!-- Child Card Attachement Start -->				
+<div class="card">
+  <h5 class="card-header">Attachement</h5>
+  <div class="card-body">
+    <div class="row">
+    	<div class="mb-3 col-md-3">
+			<label class="form-label" for="candidatePhoto">Upload Photo</label>
+			<input class="form-control" type="file" id="candidatePhoto" required>
+		</div>
+		<div class="mb-3 col-md-3">
+			<label class="form-label" for="candidateAadhar">Upload Aadhar</label>
+			<input class="form-control" type="file" id="candidateAadhar" required>
+		</div>
+		<div class="mb-3 col-md-3">
+			<label class="form-label" for="sponserDocs">Upload Sponsership Documents</label>
+			<input class="form-control" type="file" id="sponserDocs" required>
+		</div>
+		<div class="mb-3 col-md-3">
+			<label class="form-label" for="inputNote">Note</label>
+			<textarea class="form-control" id="inputNote" rows="1" ></textarea>
+		</div>
+    </div> <!-- Child Card row end -->
+  </div> <!-- Child .Card-Body -->
+</div> <!-- Child .Card -->
+<!-- Child Card Attachement End -->		
+
+<!-- Child Card Fees Details Start -->				
+<div class="card">
+  <h5 class="card-header">Fees Details</h5>
+  <div class="card-body">
+    <div class="row">
+    
+    	<div class="mb-3 col-md-3">
+			<label class="form-label" for="inputTotalFees">Total Fees</label>
+			<input type="text" class="form-control" name="" id="inputTotalFees" required>
+		</div>
+		<div class="mb-3 col-md-3">
+			<label class="form-label" for="inputInstallments">Paid Total Fees</label>
+			<select id="selectInstallment" class="form-control" required>
+				<option selected value="No">No</option>
+				<option>Yes</option>
+			</select>
+		</div>
+		<div class="mb-3 col-md-3">
+			<label class="form-label" for="inputInstallments">Installment</label>
+			<select id="selectInstallment" class="form-control">
+				<option selected value="No">No</option>
+				<option>Yes</option>
+			</select>
+		</div>	
+		<!-- If Installment Yes then required to create add installment with 
+		1)Installment_Number 2)installment_Amount 3)Paid Date 4)Remaining_Amount -->
+		<div class="mb-3 col-md-3">
+			<label class="form-label" for="inputNote">Fees Note</label>
+			<textarea class="form-control" id="inputNote" rows="1" ></textarea>
+		</div>
+    </div> <!-- Child Card row end -->
+  </div> <!-- Child .Card-Body -->
+</div> <!-- Child .Card -->
+<!-- Child Card Fees Details End -->	
+			
+		</div> <!-- .Card-Body -->
+			  <div class="card-footer">
+    			<div class="row mb">
+      				<div class="col-sm-12" style="text-align: center;">
+        				<button type="submit" class="btn btn-primary">Save</button>  
+     				</div>
+     			</div>
+  			  </div> <!-- .Card-Footer -->
+	</div> <!-- .Card -->
+</div> <!-- col md 12 -->
+</form>
+
+
+<!--  -->
+
+
+	</div>	
+</main>
+	<!-- BODY MAIN END-->
+
+
+
+</body>
+</html>

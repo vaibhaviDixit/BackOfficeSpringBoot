@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="layout/admin_base::admlayout(~{::title},~{::main})">
+<head>
+
+<title>Create Bill</title>
+</head>
+<body>
+
+
+
+<!-- BODY MAIN START-->
+<main class="content">
+	<div class="container-fluid p-0">
+
+
+<!--  -->
+
+<form  action="#" method="POST" id="enroll" enctype="multipart/form-data">		
+<div class="col-md-12">
+	<div class="card">
+		  <h5 class="card-header" style="text-align: end;">Bill Form</h5>
+					
+		<div class="card-body">
+							
+<!-- Child Card Candidate Details Start -->				
+<div class="card">
+  <h5 class="card-header">Bill Details</h5>
+  <div class="card-body">
+    <div class="row">
+    				<div class="mb-3 col-md-4">
+						<label class="form-label" for="inputBillNo">Bill No</label>
+						<input type="date" class="form-control" id="inputBillNo" placeholder="Bill No" required>
+					</div>
+
+    				<div class="mb-3 col-md-4">
+						<label class="form-label" for="inputBillTo">Bill To</label>
+						<input type="text" class="form-control" id="inputBillTo" placeholder="Bill To" required>
+					</div>
+
+				
+
+					<div class="mb-3 col-md-4">
+						<label class="form-label" for="inputBillDate">Bill Date</label>
+						<input type="date" class="form-control" id="inputBillDate"  required>
+					</div>
+
+					<div class="mb-3 col-md-4">
+						<label class="form-label" for="inputBillTyoe">Bill Type</label>
+						<input type="text" class="form-control" id="inputBillTyoe" placeholder="Bill Type" required>
+					</div>
+
+
+					<div class="mb-3 col-md-4">
+						<label class="form-label" for="inputFrom">Bill Duration From</label>
+						<input type="date" class="form-control" id="inputFrom"  required>
+					</div>
+					<div class="mb-3 col-md-4">
+						<label class="form-label" for="inputTo">Bill Duration To</label>
+						<input type="date" class="form-control" id="inputTo" required>
+					</div>		
+
+					<div class="mb-3 col-md-12">
+						<label class="form-label" for="inputNote">Bill Note</label>
+						<textarea class="form-control" id="inputNote" required></textarea>
+					</div>		
+					
+    </div> <!-- Child Card row end -->	    
+  </div> <!-- Child .Card-Body -->
+</div> <!-- Child .Card -->
+<!-- Child Card Candidate Details End -->	
+
+<!-- add bill starts -->
+<div class="">
+		<!-- Child Card installment Details Start -->				
+<div class="card">
+	<h5 class="card-header">Add Item</h5>
+  <table  class="table table-sm" style="width: 100%;">
+                      <thead>
+                        <tr>
+                          <th>Sr. No.</th>
+                          <th>Description</th>
+                          <th>Qty</th>
+                          <th>Unit Price</th>
+                          <th>Months</th>
+                          <th>Amount</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody id="tableb" class="billItemsRow">
+                      	<!-- add bill here -->
+                  
+                      </tbody>
+                    </table>
+
+ 					<div class="row">
+ 						<div class="col-md-12">
+                      <div class="row mb">
+                        <div class="col-sm-12" style="text-align: end;">
+                          <a class="btn btn-primary" onclick="addBill()">
+                            <i class="fas fa-plus"> Add</i>
+                          </a> 
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="mb-3 col-md-4">
+						<label class="form-label" for="totalBillAmt">Total</label>
+                    	<input type="number" value="0" class="form-control" id="totalBillAmt" required disabled>
+                    </div>
+
+                     <div class="mb-3 col-md-2">
+						<label class="form-label" for="billDiscount">Discount</label>
+                    	<input type="number" value="0" class="form-control" id="billDiscount" required>
+                    </div>
+                     <div class="mb-3 col-md-2">
+						<label class="form-label" for="billdisType">Dis Type</label>
+
+                    	<select id="billdisType" class="form-control" required>
+							<option selected value="per">Per(%)</option>
+							<option value="cash">Cash(&#8377;)</option>
+						</select>
+
+                    </div>
+                     <div class="mb-3 col-md-4">
+						<label class="form-label" for="grandBillTotal">Grand Total</label>
+                    	<input type="number" value="0" class="form-control" id="grandBillTotal" required disabled>
+                    </div>
+
+ 					</div>
+
+</div> <!-- Child .Card -->
+</div>
+<!-- add bill div End -->	
+	
+			
+		</div> <!-- .Card-Body -->
+			  <div class="card-footer">
+    			<div class="row mb">
+      				<div class="col-sm-12" style="text-align: center;">
+        				<button type="submit" class="btn btn-primary">Save</button>  
+     				</div>
+     			</div>
+  			  </div> <!-- .Card-Footer -->
+	</div> <!-- .Card -->
+</div> <!-- col md 12 -->
+</form>
+
+
+<!--  -->
+
+
+	</div>	
+</main>
+	<!-- BODY MAIN END-->
+
+
+
+</body>
+</html>

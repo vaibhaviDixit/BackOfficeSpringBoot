@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="layout/admin_base::admlayout(~{::title},~{::main})">
+<head>
+
+<title>Admission</title>
+</head>
+
+
+
+<body>
+
+
+
+<!-- BODY MAIN START-->
+<main class="content">
+	<div class="container-fluid p-0">
+
+
+<!--  -->
+
+<form  action="#" method="POST" id="enroll" enctype="multipart/form-data">		
+<div class="col-md-12">
+	<div class="card">
+		  <h5 class="card-header" style="text-align: end;">Admission List</h5>
+					
+		<div class="card-body">
+							
+			<!-- Child Card Candidate Details Start -->				
+			<div class="card">
+ 				 <h5 class="card-header">Admission Details</h5>
+ 				 <div class="card-body">
+    						<form  action="#" method="POST" class="mb-3">
+										<div class="row">
+											<div class="mb-3 col-md-4">
+													<label class="form-label" for="chooseListType">Get list of</label>
+													<select id="chooseListType" class="form-control" required>
+														<option selected disabled value="">Choose...</option>
+														<option value="internship">Internship</option>
+														<option value="sponsership">Sponsership</option>
+														<option value="course">Course</option>
+													</select>
+											</div>
+											<div class="mb-3 col-md-4" >
+														<label class="form-label" for="chooseListYear">Year</label>
+														<select id="chooseListYear" class="form-control" required>
+														<option selected disabled value="">Choose...</option>
+														<script type="text/javascript">
+															
+															for (var i =2000; i <=2050;i++) {
+																document.write('<option value="'+i+'">'+i+'</option>');
+															}
+														</script>
+													</select>
+											</div>
+
+											<div class="mb-3 col-md-3 " style="align-self: flex-end;">
+														<button type="submit" class="btn btn-primary">Get List</button> 
+											</div>
+
+										</div>		
+								</form> <!-- Child Card filter list end -->	  
+
+								<div class="table-responsive">
+									<table id="datatables-column-search-text-inputs" class="table table-striped" style="width:100%">
+										<thead>
+											<tr>
+												<th>Sr No.</th>
+												<th>Name</th>
+												<th>Gender</th>
+												<th>Email</th>
+												<th>Mobile</th>
+												<th>Address</th>
+												<th>Enrollment</th>
+												<th>Title</th>
+												<th>Admission Date</th>
+												<th>Start-End Date</th>
+												<th>Docs</th>
+												<th>Total fees</th>
+												<th>Paid fees</th>
+												<th>Installments</th>
+												<th>Note</th>
+												<th>Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Sr No.</td>
+												<td>Name</td>
+												<td>Gender</td>
+												<td>Email</td>
+												<td>Mobile</td>
+												<td>Address</td>
+												<td>Enrollment</td>
+												<td>Title</td>
+												<td>Admission Date</td>
+												<td>Start-End Date</td>
+												<td>Docs</td>
+												<td>Total fees</td>
+												<td>Paid fees</td>
+												<td>Installments</td>
+												<td>Note</td>
+												
+												<td >
+													<div class="d-flex justify-content-between">
+													<a class="btn btn-sm btn-primary">
+                            							<i class="fas fa-eye"> View</i>
+                          							</a>
+                          							<a class="btn btn-sm btn-warning mx-2">
+                            							<i class="fas fa-pencil-square"> Edit</i>
+                          							</a>
+                          							<a class="btn btn-sm btn-danger">
+                            							<i class="fas fa-trash"> Delete</i>
+                          							</a>
+                          							</div>
+
+
+												</td>
+											</tr>
+											
+										</tbody>
+										
+									</table>
+								</div>
+								  
+  </div> <!-- Child .Card-Body -->
+</div> <!-- Child .Card -->
+<!-- Child Card Candidate Details End -->	
+
+
+
+
+	</div> <!-- .Card -->
+</div> <!-- col md 12 -->
+</form>
+
+
+<!--  -->
+
+
+	</div>	
+</main>
+	<!-- BODY MAIN END-->
+
+
+
+
+
+</body>
+</html>

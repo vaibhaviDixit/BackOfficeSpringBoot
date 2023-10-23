@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="layout/admin_base::admlayout(~{::title},~{::main})">
+<head>
+
+<title>Create Quotation</title>
+</head>
+<body>
+
+
+
+<!-- BODY MAIN START-->
+<main class="content">
+	<div class="container-fluid p-0">
+
+
+<!--  -->
+
+<form  action="#" method="POST" id="enroll" enctype="multipart/form-data">		
+<div class="col-md-12">
+	<div class="card">
+		  <h5 class="card-header" style="text-align: end;">Quotation Form</h5>
+					
+		<div class="card-body">
+							
+<!-- Child Card Candidate Details Start -->				
+<div class="card">
+  <h5 class="card-header">Quotation Details</h5>
+  <div class="card-body">
+    <div class="row">
+
+    				<div class="mb-3 col-md-6">
+						<label class="form-label" for="inputRef">Ref</label>
+						<input type="text" class="form-control" id="inputRef" placeholder="Ref" required>
+					</div>
+
+					<div class="mb-3 col-md-6">
+						<label class="form-label" for="inputDate">Date</label>
+						<input type="date" class="form-control" id="inputDate"  required>
+					</div>
+
+    				<div class="mb-3 col-md-3">
+						<label class="form-label" for="inputTo">To</label>
+						<input type="text" class="form-control" id="inputTo" placeholder="To" required>
+					</div>
+					<div class="mb-3 col-md-9">
+						<label class="form-label" for="inputSubject">Subject</label>
+						<input type="text" class="form-control" id="inputSubject" placeholder="Subject" required>
+					</div>
+					<div class="mb-3 col-md-12">
+						<label class="form-label" for="inputTitle">Title</label>
+						<input type="text" class="form-control" id="inputTitle" placeholder="Title">
+					</div>
+
+					
+					
+					<!-- add features  -->
+					<div class="mb-3 col-md-12">
+						<label class="form-label" for="inputFeatures">Features</label>
+						
+							
+							<div class="row">
+								<table id="addFeaturesRows">
+									<tr>
+										<td class="col-md-12"><input type="text" class="form-control" id="inputFeatures" placeholder="Features" required></td>
+									</tr>
+									
+								</table>
+							</div>
+						
+						
+
+						<div class="col-sm-12 mt-1" style="text-align: end;">
+                          <a class="btn btn-primary" onclick="addFeaturesRows()">
+                            <i class="fas fa-plus"> Add</i>
+                          </a> 
+                        </div>
+
+					</div>
+					<!-- add features end -->
+
+					<!-- add Terms & Conditions  -->
+					<div class="mb-3 col-md-12">
+						<label class="form-label" for="inputFeatures">Terms & Conditions</label>
+						
+							
+							<div class="row">
+								<table id="addFeaturesRows">
+									<tr>
+										<td class="col-md-12"><input type="text" class="form-control" id="inputFeatures" placeholder="Terms & Conditions" required></td>
+									</tr>
+									
+								</table>
+							</div>
+						
+						
+
+						<div class="col-sm-12 mt-1" style="text-align: end;">
+                          <a class="btn btn-primary" onclick="addFeaturesRows()">
+                            <i class="fas fa-plus"> Add</i>
+                          </a> 
+                        </div>
+
+					</div>
+					<!-- add Terms & Conditions end -->
+
+					<!-- add Description of the Product  -->
+					<div class="mb-3 col-md-12">
+						<label class="form-label" for="inputFeatures">Description of the Product</label>
+						
+							
+							<div class="row">
+								<table id="addFeaturesRows">
+									<tr>
+										<td class="col-md-12"><input type="text" class="form-control" id="inputFeatures" placeholder="Description of the Product" required></td>
+									</tr>
+									
+								</table>
+							</div>
+						
+						
+
+						<div class="col-sm-12 mt-1" style="text-align: end;">
+                          <a class="btn btn-primary" onclick="addFeaturesRows()">
+                            <i class="fas fa-plus"> Add</i>
+                          </a> 
+                        </div>
+
+					</div>
+					<!-- add Description of the Product end -->
+
+					<!-- add Accessibility during Development  -->
+					<div class="mb-3 col-md-12">
+						<label class="form-label" for="inputFeatures">Accessibility during Development</label>
+						
+							
+							<div class="row">
+								<table id="addFeaturesRows">
+									<tr>
+										<td class="col-md-12"><input type="text" class="form-control" id="inputFeatures" placeholder="Accessibility during Development" required></td>
+									</tr>
+									
+								</table>
+							</div>
+						
+						
+
+						<div class="col-sm-12 mt-1" style="text-align: end;">
+                          <a class="btn btn-primary" onclick="addFeaturesRows()">
+                            <i class="fas fa-plus"> Add</i>
+                          </a> 
+                        </div>
+
+					</div>
+					<!-- add Accessibility during Development end -->
+					<!-- add features  -->
+					<div class="mb-3 col-md-12">
+						<label class="form-label" for="inputFeatures">Developer Responsibilities:</label>
+						
+							
+							<div class="row">
+								<table id="addFeaturesRows">
+									<tr>
+										<td class="col-md-12"><input type="text" class="form-control" id="inputFeatures" placeholder="Developer Responsibilities:" required></td>
+									</tr>
+									
+								</table>
+							</div>
+						
+						
+
+						<div class="col-sm-12 mt-1" style="text-align: end;">
+                          <a class="btn btn-primary" onclick="addFeaturesRows()">
+                            <i class="fas fa-plus"> Add</i>
+                          </a> 
+                        </div>
+
+					</div>
+					<!-- add features end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+					
+						
+					
+    </div> <!-- Child Card row end -->	    
+  </div> <!-- Child .Card-Body -->
+</div> <!-- Child .Card -->
+<!-- Child Card quotation Details End -->	
+
+	
+			
+		</div> <!-- .Card-Body -->
+			  <div class="card-footer">
+    			<div class="row mb">
+      				<div class="col-sm-12" style="text-align: center;">
+        				<button type="submit" class="btn btn-primary">Save</button>  
+     				</div>
+     			</div>
+  			  </div> <!-- .Card-Footer -->
+	</div> <!-- .Card -->
+</div> <!-- col md 12 -->
+</form>
+
+
+<!--  -->
+
+
+	</div>	
+</main>
+	<!-- BODY MAIN END-->
+
+
+
+</body>
+</html>
